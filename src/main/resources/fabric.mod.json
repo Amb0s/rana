@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "ranamod",
+  "version": "${version}",
+
+  "name": "Rana Mod",
+  "description": "Brings back Rana!",
+  "authors": [
+    "Ambos"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Amb0s/rana-mod",
+    "issues": "https://github.com/Amb0s/rana-mod/issues"
+  },
+
+  "license": "MIT",
+  "icon": "assets/ranamod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ambos.ranamod.RanaModInit"
+    ],
+    "client": [
+      "ambos.ranamod.RanaModClientInit"
+    ]
+  },
+  "mixins": [
+    "ranamod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

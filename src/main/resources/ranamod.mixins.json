@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "ambos.ranamod.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "PlainsBiomeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

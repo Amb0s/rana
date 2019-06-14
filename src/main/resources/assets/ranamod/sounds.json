@@ -1,0 +1,9 @@
+{
+  "rana_hurt": {
+    "category": "player",
+    "sounds": [
+      "ranamod:entity/rana/hurt"
+    ],
+    "subtitle": "subtitle.ranamod.rana_hurt"
+  }
+}

@@ -1,5 +1,8 @@
 # Rana Mod
 
+## Image
+![Rana](https://i.imgur.com/KpUF2lB.png)
+
 ## TODO
 * Clean animation code
 * Add sounds

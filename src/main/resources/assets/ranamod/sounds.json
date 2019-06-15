@@ -1,9 +1,16 @@
 {
-  "rana_hurt": {
+  "entity.rana.hurt": {
     "category": "player",
     "sounds": [
       "ranamod:entity/rana/hurt"
     ],
-    "subtitle": "subtitle.ranamod.rana_hurt"
+    "subtitle": "subtitle.ranamod.entity.rana.hurt"
+  },
+  "entity.rana.death": {
+    "category": "player",
+    "sounds": [
+      "ranamod:entity/rana/death"
+    ],
+    "subtitle": "subtitle.ranamod.entity.rana.death"
   }
 }

@@ -23,7 +23,7 @@ public class RanaModInit implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Registry.register(Registry.ITEM, new Identifier("ranamod", "rana_spawn_egg"),
-				new SpawnEggItem(RANA, -16740025, -16750284, new Item.Settings().maxCount(64).group(ItemGroup.MISC)));
+				new SpawnEggItem(RANA, 0x009147, 0x006934, new Item.Settings().maxCount(64).group(ItemGroup.MISC)));
 	}
 }
 

@@ -38,11 +38,11 @@ public class RanaEntity extends AnimalEntity {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource_1) {
-        return null;
+        return RanaModClientInit.ENTITY_RANA_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return null;
+        return RanaModClientInit.ENTITY_RANA_DEATH;
     }
 }

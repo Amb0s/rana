@@ -12,16 +12,14 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class RanaModInit implements ModInitializer {
-	public static final EntityType<RanaEntity> RANA =
-			Registry.register(
-					Registry.ENTITY_TYPE,
-					new Identifier("ranamod", "rana"),
-					FabricEntityTypeBuilder.create(EntityCategory.CREATURE, RanaEntity::new).size(new EntitySize(0.5F,
-							1.7F, true)).build()
-			);
+	public static final EntityType<RanaEntity> RANA = FabricEntityTypeBuilder
+			.create(EntityCategory.CREATURE, RanaEntity::new)
+			.size(new EntitySize(0.5F, 1.7F, true))
+			.build();
 
 	@Override
 	public void onInitialize() {
+		Registry.register(Registry.ENTITY_TYPE, new Identifier("ranamod", "rana"), RANA);
 		Registry.register(Registry.ITEM, new Identifier("ranamod", "rana_spawn_egg"),
 				new SpawnEggItem(RANA, 0x009147, 0x006934, new Item.Settings().maxCount(64).group(ItemGroup.MISC)));
 	}

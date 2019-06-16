@@ -14,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 public class RanaModInit implements ModInitializer {
 	public static final EntityType<RanaEntity> RANA = FabricEntityTypeBuilder
 			.create(EntityCategory.CREATURE, RanaEntity::new)
-			.size(new EntitySize(0.5F, 1.7F, true))
+			.size(new EntitySize(0.48F, 1.7F, true))
 			.build();
 
 	@Override

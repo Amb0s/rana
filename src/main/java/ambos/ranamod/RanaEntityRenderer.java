@@ -6,7 +6,7 @@ import net.minecraft.util.Identifier;
 
 public class RanaEntityRenderer extends MobEntityRenderer<RanaEntity, RanaEntityModel> {
     public RanaEntityRenderer(EntityRenderDispatcher entityRenderDispatcher_1) {
-        super(entityRenderDispatcher_1, new RanaEntityModel(), 0.5F);
+        super(entityRenderDispatcher_1, new RanaEntityModel(), 0.48F);
     }
 
     @Override

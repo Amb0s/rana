@@ -83,10 +83,12 @@ public class RanaEntityModel extends BipedEntityModel<RanaEntity> {
 
         this.body.yaw = 0.0F;
         this.rightArm.rotationPointZ = 0.0F;
-        this.rightArm.rotationPointX = -5.0F;
+        this.rightArm.rotationPointX = -4.8F;
         this.leftArm.rotationPointZ = 0.0F;
-        this.leftArm.rotationPointX = 5.0F;
+        this.leftArm.rotationPointX = 4.8F;
+
         float float_7 = 1.0F;
+
         if (boolean_1) {
             float_7 = (float)livingEntity_1.getVelocity().lengthSquared();
             float_7 /= 0.2F;

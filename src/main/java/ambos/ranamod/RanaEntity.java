@@ -7,17 +7,15 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class RanaEntity extends AnimalEntity {
     protected RanaEntity(EntityType<? extends AnimalEntity> entityType_1, World world_1) {
         super(entityType_1, world_1);
-    }
-
-    @Override
-    public PassiveEntity createChild(PassiveEntity passiveEntity) {
-        return null;
     }
 
     @Override
@@ -45,4 +43,40 @@ public class RanaEntity extends AnimalEntity {
     protected SoundEvent getDeathSound() {
         return RanaModClientInit.ENTITY_RANA_DEATH;
     }
+
+    @Override
+    protected int getCurrentExperience(PlayerEntity playerEntity_1) {
+        return 3 + this.world.random.nextInt(5);
+    }
+
+    @Override
+    public boolean canEat() {
+        return false;
+    }
+
+    @Override
+    public boolean isBreedingItem(ItemStack itemStack_1) {
+        return false;
+    }
+
+    @Override
+    public boolean isInLove() {
+        return false;
+    }
+
+    @Override
+    public boolean interactMob(PlayerEntity playerEntity_1, Hand hand_1) {
+        return false;
+    }
+
+    @Override
+    public boolean canBreedWith(AnimalEntity animalEntity_1) {
+        return false;
+    }
+
+    @Override
+    public PassiveEntity createChild(PassiveEntity passiveEntity) {
+        return null;
+    }
+
 }

@@ -2,8 +2,6 @@ package ambos.ranamod;
 
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.model.Cuboid;
-import net.minecraft.item.CrossbowItem;
-import net.minecraft.util.AbsoluteHand;
 import net.minecraft.util.math.MathHelper;
 
 public class RanaEntityModel extends BipedEntityModel<RanaEntity> {
@@ -77,9 +75,9 @@ public class RanaEntityModel extends BipedEntityModel<RanaEntity> {
     public void method_17087(RanaEntity entity, float float_1, float float_2, float float_3, float float_4, float float_5, float float_6) {
         // Rotation points
         this.rightArm.rotationPointZ = 0.0F;
-        this.rightArm.rotationPointX = -4.8F;
+        this.rightArm.rotationPointX = -4.85F;
         this.leftArm.rotationPointZ = 0.0F;
-        this.leftArm.rotationPointX = 4.8F;
+        this.leftArm.rotationPointX = 4.85F;
 
         // Yaw
         this.body.yaw = 0.0F;
@@ -105,12 +103,12 @@ public class RanaEntityModel extends BipedEntityModel<RanaEntity> {
         Cuboid var10000;
 
         var10000 = this.rightArm;
-        var10000.roll += MathHelper.cos(float_3 * 0.09F) * 0.05F + 0.05F;
+        var10000.roll += MathHelper.cos(float_3 * 0.09F) * 0.02F + 0.04F;
         var10000 = this.leftArm;
-        var10000.roll -= MathHelper.cos(float_3 * 0.09F) * 0.05F + 0.05F;
+        var10000.roll -= MathHelper.cos(float_3 * 0.09F) * 0.02F + 0.04F;
         var10000 = this.rightArm;
-        var10000.pitch += MathHelper.sin(float_3 * 0.067F) * 0.05F;
+        var10000.pitch += MathHelper.sin(float_3 * 0.067F) * 0.02F;
         var10000 = this.leftArm;
-        var10000.pitch -= MathHelper.sin(float_3 * 0.067F) * 0.05F;
+        var10000.pitch -= MathHelper.sin(float_3 * 0.067F) * 0.02F;
     }
 }

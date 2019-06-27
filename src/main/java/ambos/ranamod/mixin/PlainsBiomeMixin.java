@@ -27,5 +27,4 @@ public class PlainsBiomeMixin extends Biome {
                 )
         );
     }
-
 }

@@ -3,15 +3,15 @@ package ambos.ranamod.mixin;
 import ambos.ranamod.RanaModInit;
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.ForestBiome;
+import net.minecraft.world.biome.JungleBiome;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(ForestBiome.class)
-public class ForestBiomeMixin extends Biome {
-    protected ForestBiomeMixin(Settings biome$Settings_1) {
+@Mixin(JungleBiome.class)
+public class JungleBiomeMixin extends Biome {
+    protected JungleBiomeMixin(Biome.Settings biome$Settings_1) {
         super(biome$Settings_1);
     }
 

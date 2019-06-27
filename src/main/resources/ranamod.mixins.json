@@ -5,9 +5,15 @@
   "mixins": [
   ],
   "client": [
+    "BirchForestBiomeMixin",
+    "DarkForestBiomeMixin",
+    "FlowerForestBiomeMixin",
     "ForestBiomeMixin",
+    "JungleBiomeMixin",
     "PlainsBiomeMixin",
-    "RiverBiomeMixin"
+    "RiverBiomeMixin",
+    "SunflowerPlainsBiomeMixin",
+    "SwampBiomeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -25,6 +25,11 @@
           ],
           "name": "minecraft:apple"
         }
+      ],
+      "conditions": [
+        {
+          "condition": "killed_by_player"
+        }
       ]
     }
   ]

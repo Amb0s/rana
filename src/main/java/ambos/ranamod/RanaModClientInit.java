@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class RanaModClientInit implements ClientModInitializer {
+    // Registers sounds.
     public static final SoundEvent ENTITY_RANA_HURT = Registry.register(Registry.SOUND_EVENT,
             "entity.rana.hurt", new SoundEvent(new Identifier("ranamod", "entity.rana.hurt")));
     public static final SoundEvent ENTITY_RANA_DEATH = Registry.register(Registry.SOUND_EVENT,
@@ -14,6 +15,7 @@ public class RanaModClientInit implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        // Connects entity to renderer.
         EntityRendererRegistry.INSTANCE.register(RanaEntity.class,
                 (entityRenderDispatcher, context) -> new RanaEntityRenderer(entityRenderDispatcher));
     }

@@ -78,5 +78,4 @@ public class RanaEntity extends AnimalEntity {
     public PassiveEntity createChild(PassiveEntity passiveEntity) {
         return null;
     }
-
 }

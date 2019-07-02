@@ -19,7 +19,9 @@ public class RanaModInit implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		// Registers Rana.
 		Registry.register(Registry.ENTITY_TYPE, new Identifier("ranamod", "rana"), RANA);
+		// Registers spawn egg.
 		Registry.register(Registry.ITEM, new Identifier("ranamod", "rana_spawn_egg"),
 				new SpawnEggItem(RANA, 0x009147, 0x006934, new Item.Settings().maxCount(64).group(ItemGroup.MISC)));
 	}

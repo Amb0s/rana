@@ -3,7 +3,7 @@ package ambos.ranamod;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityCategory;
-import net.minecraft.entity.EntitySize;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -14,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 public class RanaModInit implements ModInitializer {
 	public static final EntityType<RanaEntity> RANA = FabricEntityTypeBuilder
 			.create(EntityCategory.CREATURE, RanaEntity::new)
-			.size(new EntitySize(0.48F, 1.7F, true))
+			.size(new EntityDimensions(0.48F, 1.7F, true))
 			.build();
 
 	@Override

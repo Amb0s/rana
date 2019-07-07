@@ -10,7 +10,7 @@ I was inspired by [KodaichiZero's Rana Mod](https://www.minecraftforum.net/forum
 NOTE: This mod is for Minecraft 1.14 and requires [Fabric](http://fabricmc.net/).
 
 ## To do
-See the [project board](https://github.com/Amb0s/rana-mod/projects/1).
+See the [project board](https://github.com/Amb0s/rana-mod/projects/4).
 
 ## Credits
 morunyau, for their [littleMaidMob soundpack](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1287042-1-7-10-1-8-littlemaidmob-final-versions-updated) from which I borrowed some sounds.

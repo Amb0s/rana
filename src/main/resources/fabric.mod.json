@@ -1,32 +1,33 @@
 {
   "schemaVersion": 1,
-  "id": "ranamod",
+  "id": "rana",
   "version": "${version}",
 
-  "name": "Rana Mod",
+  "name": "Rana",
   "description": "Brings back Rana!",
   "authors": [
     "Ambos"
   ],
   "contact": {
-    "homepage": "https://github.com/Amb0s/rana-mod",
-    "issues": "https://github.com/Amb0s/rana-mod/issues"
+    "homepage": "https://memoryshards.xyz",
+    "sources": "https://github.com/Amb0s/rana",
+    "issues": "https://github.com/Amb0s/rana/issues"
   },
 
   "license": "MIT",
-  "icon": "assets/ranamod/icon.png",
+  "icon": "assets/rana/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "ambos.ranamod.RanaModInit"
+      "ambos.rana.RanaModInit"
     ],
     "client": [
-      "ambos.ranamod.RanaModClientInit"
+      "ambos.rana.RanaModClientInit"
     ]
   },
   "mixins": [
-    "ranamod.mixins.json"
+    "rana.mixins.json"
   ],
 
   "depends": {

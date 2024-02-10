@@ -1,5 +1,5 @@
 {
-  "type": "ranamod:entity",
+  "type": "rana:entity",
   "pools": [
     {
       "rolls": 1,

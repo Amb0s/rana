@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ranamod:item/blank_egg"
+    "layer0": "rana:item/blank_egg"
   }
 }

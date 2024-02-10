@@ -26,6 +26,9 @@ public class Rana implements ModInitializer {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, RanaEntity::new)
                     .dimensions(EntityDimensions.fixed(0.48f, 1.7f)).build());
 
+    // Lists biomes where Rana can spawn.
+    public static final String[] ALLOWED_BIOMES = new String[]{"infdev_415"};
+
     // Declares Rana spawn egg.
     public static final Item RANA_SPAWN_EGG = new SpawnEggItem(RANA, 0x009147, 0x006934,
             new Item.Settings().maxCount(64));
@@ -41,9 +44,12 @@ public class Rana implements ModInitializer {
             content.add(RANA_SPAWN_EGG);
         });
 
-        // Makes Rana spawn in Modern Beta's Infdev 20100415 biome.
-        Identifier biomeInfdev415 = new Identifier("modern_beta", "infdev_415");
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(RegistryKey.of(RegistryKeys.BIOME, biomeInfdev415)),
+        // Makes Rana spawn in Modern Beta's biomes.
+        Identifier biomeId = null;
+        for (String biome : ALLOWED_BIOMES) {
+            biomeId = new Identifier("modern_beta", biome);
+            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(RegistryKey.of(RegistryKeys.BIOME, biomeId)),
                 SpawnGroup.CREATURE, RANA, 8, 1, 3);
+        }
     }
 }

@@ -27,17 +27,17 @@ public class RanaEntityModel extends BipedEntityModel<RanaEntity> {
                 ModelTransform.pivot(0.0F, 0.0F, 0.0F));
         ModelPartData ponyTails = head.addChild("ponyTails", ModelPartBuilder.create(),
                 ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData rightPonytail = ponyTails.addChild("rightPonytail",
+        ponyTails.addChild("rightPonytail",
                 ModelPartBuilder.create().uv(14, 43).cuboid(-4.0F, 2.0F, 4.5F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F))
                         .uv(0, 42).mirrored().cuboid(-6.0F, 3.0F, 5.5F, 3.0F, 3.0F, 3.0F, new Dilation(0.0F))
                         .mirrored(false),
                 ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData leftPonytail = ponyTails.addChild("leftPonytail",
+        ponyTails.addChild("leftPonytail",
                 ModelPartBuilder.create().uv(14, 43).mirrored()
                         .cuboid(2.0F, 2.0F, 4.5F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false)
                         .uv(0, 42).cuboid(3.0F, 3.0F, 5.5F, 3.0F, 3.0F, 3.0F, new Dilation(0.0F)),
                 ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData scrunchies = head.addChild("scrunchies",
+        head.addChild("scrunchies",
                 ModelPartBuilder.create().uv(44, 8).mirrored()
                         .cuboid(1.0F, 1.0F, 3.5F, 3.0F, 3.0F, 1.0F, new Dilation(0.0F)).mirrored(false)
                         .uv(44, 8).cuboid(-4.0F, 1.0F, 3.5F, 3.0F, 3.0F, 1.0F, new Dilation(0.0F)),
@@ -45,26 +45,26 @@ public class RanaEntityModel extends BipedEntityModel<RanaEntity> {
         ModelPartData hat = modelPartData.addChild(EntityModelPartNames.HAT,
                 ModelPartBuilder.create().uv(33, 1).cuboid(-4.0F, -4.0F, -3.5F, 8.0F, 3.0F, 7.0F, new Dilation(0.5F)),
                 ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData eyes = hat.addChild("eyes",
+        hat.addChild("eyes",
                 ModelPartBuilder.create().uv(0, 48).mirrored()
                         .cuboid(1.0F, -6.5F, -3.0F, 3.0F, 2.0F, 1.0F, new Dilation(0.0F)).mirrored(false)
                         .uv(0, 48).cuboid(-4.0F, -6.5F, -3.0F, 3.0F, 2.0F, 1.0F, new Dilation(0.0F)),
                 ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData body = modelPartData.addChild(EntityModelPartNames.BODY,
+        modelPartData.addChild(EntityModelPartNames.BODY,
                 ModelPartBuilder.create().uv(0, 16).cuboid(-3.0F, 4.0F, -1.5F, 6.0F, 10.0F, 3.0F, new Dilation(0.0F)),
                 ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData leftArm = modelPartData.addChild(EntityModelPartNames.LEFT_ARM,
+        modelPartData.addChild(EntityModelPartNames.LEFT_ARM,
                 ModelPartBuilder.create().uv(0, 29).cuboid(-2.0F, 2.0F, -1.5F, 3.0F, 10.0F, 3.0F, new Dilation(0.0F)),
                 ModelTransform.pivot(5.0F, 2.0F, 0.0F));
-        ModelPartData rightArm = modelPartData.addChild(EntityModelPartNames.RIGHT_ARM,
+        modelPartData.addChild(EntityModelPartNames.RIGHT_ARM,
                 ModelPartBuilder.create().uv(0, 29).mirrored()
                         .cuboid(-1.0F, 2.0F, -1.5F, 3.0F, 10.0F, 3.0F, new Dilation(0.0F)).mirrored(false),
                 ModelTransform.pivot(-5.0F, 2.0F, 0.0F));
-        ModelPartData leftLeg = modelPartData.addChild(EntityModelPartNames.LEFT_LEG,
+        modelPartData.addChild(EntityModelPartNames.LEFT_LEG,
                 ModelPartBuilder.create().uv(12, 29).mirrored()
                         .cuboid(-1.9F, 2.0F, -1.5F, 3.0F, 10.0F, 3.0F, new Dilation(0.0F)).mirrored(false),
                 ModelTransform.pivot(1.9F, 12.0F, 0.0F));
-        ModelPartData rightLeg = modelPartData.addChild(EntityModelPartNames.RIGHT_LEG,
+        modelPartData.addChild(EntityModelPartNames.RIGHT_LEG,
                 ModelPartBuilder.create().uv(12, 29).cuboid(-1.1F, 2.0F, -1.5F, 3.0F, 10.0F, 3.0F, new Dilation(0.0F)),
                 ModelTransform.pivot(-1.9F, 12.0F, 0.0F));
 

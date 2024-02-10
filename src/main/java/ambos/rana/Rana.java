@@ -12,7 +12,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class RanaModInit implements ModInitializer {
+public class Rana implements ModInitializer {
     // Registers Rana.
     public static final EntityType<RanaEntity> RANA = Registry.register(
             Registries.ENTITY_TYPE,
@@ -22,9 +22,10 @@ public class RanaModInit implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        // Registers Rana default attributes.
         FabricDefaultAttributeRegistry.register(RANA, RanaEntity.createRanaAttributes());
 
-        // Registers spawn egg.
+        // Registers Rana spawn egg.
         Registry.register(Registries.ITEM, new Identifier("rana", "rana_spawn_egg"),
                 new SpawnEggItem(RANA, 0x009147, 0x006934, new Item.Settings().maxCount(64)));
     }

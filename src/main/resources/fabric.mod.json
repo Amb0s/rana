@@ -14,15 +14,12 @@
   "icon": "assets/rana/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": ["ambos.rana.RanaModInit"],
-    "client": ["ambos.rana.RanaModClientInit"]
+    "main": ["ambos.rana.Rana"],
+    "client": ["ambos.rana.RanaClient"]
   },
   "mixins": ["rana.mixins.json"],
   "depends": {
-    "fabricloader": ">=0.4.0",
+    "fabricloader": ">=0.15.6",
     "fabric": "*"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }

@@ -1,21 +1,23 @@
-package ambos.ranamod;
+package ambos.rana;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class RanaEntity extends AnimalEntity {
-    protected RanaEntity(EntityType<? extends AnimalEntity> entityType_1, World world_1) {
-        super(entityType_1, world_1);
+    protected RanaEntity(EntityType<? extends AnimalEntity> entityType, World world) {
+        super(entityType, world);
     }
 
     @Override
@@ -27,15 +29,14 @@ public class RanaEntity extends AnimalEntity {
         this.goalSelector.add(4, new LookAroundGoal(this));
     }
 
-    @Override
-    protected void initAttributes() {
-        super.initAttributes();
-        this.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(16.0D);
-        this.getAttributeInstance(EntityAttributes.MOVEMENT_SPEED).setBaseValue(0.18D);
+    public static DefaultAttributeContainer.Builder createRanaAttributes() {
+        return PassiveEntity.createMobAttributes()
+        .add(EntityAttributes.GENERIC_MAX_HEALTH, 16.0)
+        .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.18f);
     }
 
     @Override
-    protected SoundEvent getHurtSound(DamageSource damageSource_1) {
+    protected SoundEvent getHurtSound(DamageSource source) {
         return RanaModClientInit.ENTITY_RANA_HURT;
     }
 
@@ -45,7 +46,7 @@ public class RanaEntity extends AnimalEntity {
     }
 
     @Override
-    protected int getCurrentExperience(PlayerEntity playerEntity_1) {
+    public int getXpToDrop() {
         return 3 + this.world.random.nextInt(5);
     }
 
@@ -55,7 +56,7 @@ public class RanaEntity extends AnimalEntity {
     }
 
     @Override
-    public boolean isBreedingItem(ItemStack itemStack_1) {
+    public boolean isBreedingItem(ItemStack stack) {
         return false;
     }
 
@@ -65,17 +66,17 @@ public class RanaEntity extends AnimalEntity {
     }
 
     @Override
-    public boolean interactMob(PlayerEntity playerEntity_1, Hand hand_1) {
+    public ActionResult interactMob(PlayerEntity player, Hand hand) {
+        return ActionResult.FAIL;
+    }
+
+    @Override
+    public boolean canBreedWith(AnimalEntity other) {
         return false;
     }
 
     @Override
-    public boolean canBreedWith(AnimalEntity animalEntity_1) {
-        return false;
-    }
-
-    @Override
-    public PassiveEntity createChild(PassiveEntity passiveEntity) {
+    public PassiveEntity createChild(ServerWorld world, PassiveEntity passiceEntity) {
         return null;
     }
 }

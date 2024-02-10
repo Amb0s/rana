@@ -1,6 +1,8 @@
 package ambos.rana;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -12,6 +14,8 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class Rana implements ModInitializer {
@@ -36,5 +40,10 @@ public class Rana implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
             content.add(RANA_SPAWN_EGG);
         });
+
+        // Makes Rana spawn in Modern Beta's Infdev 20100415 biome.
+        Identifier biomeInfdev415 = new Identifier("modern_beta", "infdev_415");
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(RegistryKey.of(RegistryKeys.BIOME, biomeInfdev415)),
+                SpawnGroup.CREATURE, RANA, 8, 1, 3);
     }
 }

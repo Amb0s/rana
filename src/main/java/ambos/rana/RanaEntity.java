@@ -31,8 +31,8 @@ public class RanaEntity extends AnimalEntity {
 
     public static DefaultAttributeContainer.Builder createRanaAttributes() {
         return PassiveEntity.createMobAttributes()
-        .add(EntityAttributes.GENERIC_MAX_HEALTH, 16.0)
-        .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.18f);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 16.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.18f);
     }
 
     @Override

@@ -1,16 +1,12 @@
 {
   "entity.rana.hurt": {
     "category": "player",
-    "sounds": [
-      "rana:entity/rana/hurt"
-    ],
+    "sounds": ["rana:entity/rana/hurt"],
     "subtitle": "subtitle.rana.entity.rana.hurt"
   },
   "entity.rana.death": {
     "category": "player",
-    "sounds": [
-      "rana:entity/rana/death"
-    ],
+    "sounds": ["rana:entity/rana/death"],
     "subtitle": "subtitle.rana.entity.rana.death"
   }
 }

@@ -10,10 +10,11 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class RanaModClientInit implements ClientModInitializer {
-        public static final EntityModelLayer MODEL_CUBE_LAYER = new EntityModelLayer(new Identifier("rana", "rana"), "main");
+    public static final EntityModelLayer MODEL_CUBE_LAYER = new EntityModelLayer(new Identifier("rana", "rana"),
+            "main");
     // Registers sounds.
     public static final SoundEvent ENTITY_RANA_HURT = Registry.register(Registries.SOUND_EVENT,
-            "entity.rana.hurt",  SoundEvent.of(new Identifier("rana", "entity.rana.hurt")));
+            "entity.rana.hurt", SoundEvent.of(new Identifier("rana", "entity.rana.hurt")));
     public static final SoundEvent ENTITY_RANA_DEATH = Registry.register(Registries.SOUND_EVENT,
             "entity.rana.death", SoundEvent.of(new Identifier("rana", "entity.rana.death")));
 

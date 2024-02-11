@@ -15,11 +15,18 @@
   "environment": "*",
   "entrypoints": {
     "main": ["ambos.rana.Rana"],
-    "client": ["ambos.rana.RanaClient"]
+    "client": ["ambos.rana.RanaClient"],
+    "modmenu": ["ambos.rana.ModMenuIntegration"]
   },
   "mixins": ["rana.mixins.json"],
   "depends": {
     "fabricloader": ">=0.15.6",
-    "fabric": "*"
+    "fabric-api": ">=0.87.2",
+    "minecraft": "~1.19.4",
+    "cloth-config": ">=10.1.117",
+    "java": ">=17"
+  },
+  "suggests": {
+    "modmenu": ">=6.2.1"
   }
 }

@@ -1,5 +1,11 @@
 package ambos.rana;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -19,15 +25,14 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class Rana implements ModInitializer {
+    //public static final Logger LOGGER = LoggerFactory.getLogger("rana");
+
     // Registers Rana.
     public static final EntityType<RanaEntity> RANA = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier("rana", "rana"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, RanaEntity::new)
                     .dimensions(EntityDimensions.fixed(0.48f, 1.7f)).build());
-
-    // Lists biomes where Rana can spawn.
-    public static final String[] ALLOWED_BIOMES = new String[]{"infdev_415"};
 
     // Declares Rana spawn egg.
     public static final Item RANA_SPAWN_EGG = new SpawnEggItem(RANA, 0x009147, 0x006934,
@@ -44,12 +49,18 @@ public class Rana implements ModInitializer {
             content.add(RANA_SPAWN_EGG);
         });
 
-        // Makes Rana spawn in Modern Beta's biomes.
-        Identifier biomeId = null;
-        for (String biome : ALLOWED_BIOMES) {
-            biomeId = new Identifier("modern_beta", biome);
-            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(RegistryKey.of(RegistryKeys.BIOME, biomeId)),
-                SpawnGroup.CREATURE, RANA, 8, 1, 3);
+        // Handles configuration.
+        AutoConfig.register(ModConfig.class, Toml4jConfigSerializer::new);
+        ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+
+        // Makes Rana spawn in selected biomes.
+        Identifier biomeIdentifier = null;
+        for (String biomeString : config.spawnBiomes) {
+            biomeIdentifier = new Identifier(biomeString.split(Identifier.NAMESPACE_SEPARATOR + "")[0],
+                    biomeString.split(Identifier.NAMESPACE_SEPARATOR + "")[1]);
+            BiomeModifications.addSpawn(
+                    BiomeSelectors.includeByKey(RegistryKey.of(RegistryKeys.BIOME, biomeIdentifier)),
+                    SpawnGroup.CREATURE, RANA, 8, 1, 3);
         }
     }
 }

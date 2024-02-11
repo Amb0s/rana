@@ -1,4 +1,8 @@
 {
   "entity.rana.rana": "Rana",
-  "item.rana.rana_spawn_egg": "Rana Spawn Egg"
+  "item.rana.rana_spawn_egg": "Rana Spawn Egg",
+  "subtitle.rana.entity.rana.hurt": "Rana hurts",
+  "subtitle.rana.entity.rana.death": "Rana dies",
+  "text.autoconfig.rana.title": "Rana Config",
+  "text.autoconfig.rana.option.spawnBiomes": "Spawn Biomes"
 }

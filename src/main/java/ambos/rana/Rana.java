@@ -3,6 +3,8 @@ package ambos.rana;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import ambos.rana.config.ModConfig;
+import ambos.rana.entity.passive.RanaEntity;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 
@@ -25,12 +27,13 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class Rana implements ModInitializer {
-    //public static final Logger LOGGER = LoggerFactory.getLogger("rana");
+    public static final String MOD_ID = "rana";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     // Registers Rana.
     public static final EntityType<RanaEntity> RANA = Registry.register(
             Registries.ENTITY_TYPE,
-            new Identifier("rana", "rana"),
+            new Identifier(MOD_ID, "rana"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, RanaEntity::new)
                     .dimensions(EntityDimensions.fixed(0.48f, 1.7f)).build());
 
@@ -44,7 +47,7 @@ public class Rana implements ModInitializer {
         FabricDefaultAttributeRegistry.register(RANA, RanaEntity.createRanaAttributes());
 
         // Registers Rana spawn egg.
-        Registry.register(Registries.ITEM, new Identifier("rana", "rana_spawn_egg"), RANA_SPAWN_EGG);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "rana_spawn_egg"), RANA_SPAWN_EGG);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
             content.add(RANA_SPAWN_EGG);
         });

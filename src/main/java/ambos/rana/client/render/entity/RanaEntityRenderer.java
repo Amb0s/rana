@@ -1,5 +1,9 @@
-package ambos.rana;
+package ambos.rana.client.render.entity;
 
+import ambos.rana.Rana;
+import ambos.rana.RanaClient;
+import ambos.rana.client.render.entity.model.RanaEntityModel;
+import ambos.rana.entity.passive.RanaEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.util.Identifier;
@@ -11,6 +15,6 @@ public class RanaEntityRenderer extends MobEntityRenderer<RanaEntity, RanaEntity
 
     @Override
     public Identifier getTexture(RanaEntity ranaEntity) {
-        return new Identifier("rana:textures/entity/rana/rana.png");
+        return new Identifier(Rana.MOD_ID + ":textures/entity/rana/rana.png");
     }
 }

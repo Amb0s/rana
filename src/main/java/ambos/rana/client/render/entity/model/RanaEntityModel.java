@@ -1,5 +1,6 @@
-package ambos.rana;
+package ambos.rana.client.render.entity.model;
 
+import ambos.rana.entity.passive.RanaEntity;
 import net.minecraft.client.model.Dilation;
 import net.minecraft.client.model.ModelData;
 import net.minecraft.client.model.ModelPart;

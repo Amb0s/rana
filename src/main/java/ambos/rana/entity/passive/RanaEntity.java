@@ -1,5 +1,6 @@
-package ambos.rana;
+package ambos.rana.entity.passive;
 
+import ambos.rana.RanaClient;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -16,7 +17,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class RanaEntity extends AnimalEntity {
-    protected RanaEntity(EntityType<? extends AnimalEntity> entityType, World world) {
+    public RanaEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
     }
 

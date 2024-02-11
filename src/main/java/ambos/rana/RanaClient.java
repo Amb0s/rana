@@ -1,5 +1,7 @@
 package ambos.rana;
 
+import ambos.rana.client.render.entity.RanaEntityRenderer;
+import ambos.rana.client.render.entity.model.RanaEntityModel;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -10,13 +12,13 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class RanaClient implements ClientModInitializer {
-    public static final EntityModelLayer RANA_MODEL_LAYER = new EntityModelLayer(new Identifier("rana", "rana"),
+    public static final EntityModelLayer RANA_MODEL_LAYER = new EntityModelLayer(new Identifier(Rana.MOD_ID, "rana"),
             "main");
     // Registers sounds.
     public static final SoundEvent ENTITY_RANA_HURT = Registry.register(Registries.SOUND_EVENT,
-            "entity.rana.hurt", SoundEvent.of(new Identifier("rana", "entity.rana.hurt")));
+            "entity.rana.hurt", SoundEvent.of(new Identifier(Rana.MOD_ID, "entity.rana.hurt")));
     public static final SoundEvent ENTITY_RANA_DEATH = Registry.register(Registries.SOUND_EVENT,
-            "entity.rana.death", SoundEvent.of(new Identifier("rana", "entity.rana.death")));
+            "entity.rana.death", SoundEvent.of(new Identifier(Rana.MOD_ID, "entity.rana.death")));
 
     @Override
     public void onInitializeClient() {

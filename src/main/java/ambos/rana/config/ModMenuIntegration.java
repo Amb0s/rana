@@ -1,4 +1,4 @@
-package ambos.rana;
+package ambos.rana.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;

@@ -1,6 +1,3 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "rana:item/blank_egg"
-  }
+  "parent": "item/template_spawn_egg"
 }

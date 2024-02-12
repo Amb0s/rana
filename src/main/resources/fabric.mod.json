@@ -16,7 +16,7 @@
   "entrypoints": {
     "main": ["ambos.rana.Rana"],
     "client": ["ambos.rana.RanaClient"],
-    "modmenu": ["ambos.rana.ModMenuIntegration"]
+    "modmenu": ["ambos.rana.config.ModMenuIntegration"]
   },
   "mixins": ["rana.mixins.json"],
   "depends": {

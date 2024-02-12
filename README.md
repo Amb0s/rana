@@ -4,7 +4,9 @@ Brings back the cutest girl from [Indev](https://minecraft.wiki/w/Rana).
 
 ## Installation
 
-Checkout the [Fabric Wiki](https://fabricmc.net/wiki/start)
+Check out the [Fabric Wiki](https://fabricmc.net/wiki/start).
+
+Note: this mod requires [Cloth Config](https://modrinth.com/mod/cloth-config).
 
 ## Credits
 
